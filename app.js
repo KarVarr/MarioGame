@@ -17,16 +17,16 @@ function jump () {
      }
       setTimeout(function(){
          mario.classList.remove("active");
-      }, 500)
+      }, 700)
     });
 }
 jump ()
 
  
-const check = setInterval(function () {
+// const check = setInterval(function () {
 
-console.log(marioTop, mushroomLeft);
-    if (mushroomLeft < 1641 && mushroomLeft > 0 && marioTop >= 1700) {
-      alert(`You'r lose!`);
-    }
-},10)   
+// console.log(marioTop, mushroomLeft);
+//     if (mushroomLeft < 1641 && mushroomLeft > 0 && marioTop >= 1700) {
+//       alert(`You'r lose!`);
+//     }
+// },10)   

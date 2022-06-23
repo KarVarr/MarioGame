@@ -1,16 +1,18 @@
+html {
+    font-size: 62.5%;
+}
 .container {
   position: relative;
-  width: 99vw;
-  height: 99vh;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-
   overflow: hidden;
 }
 
 .game {
-  width: 99vw;
+  width: 100%;
   height: 70vh;
   display: flex;
   align-items: center;
@@ -26,8 +28,8 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 99vw;
-  height: 30vh;
+  width: 100%;
+  min-height: 30vh;
   background: linear-gradient(
     180deg,
     rgb(152, 224, 88) 70%,
@@ -36,12 +38,12 @@
 }
 
 .ground {
-  width: 5vw;
+  width: 10rem;
   height: 2vh;
   background-color: rgb(97, 66, 14);
   border-radius: 86% 58% 69% 25%;
   position: absolute;
-  top: 7vh;
+  /* top: 7vh; */
 }
 
 .groont1 {
@@ -63,16 +65,16 @@
 }
 
 .sky {
-  width: 200px;
-  height: 200px;
+  max-width: 20rem;
+  height: 20rem;
   position: absolute;
-  top: 5vh;
+  top: 24vh;
   right: -30vw;
   animation: moveMushroom 10s infinite linear;
 }
 .sun {
-  width: 200px;
-  height: 200px;
+  max-width: 20rem;
+  height: 20rem;
   position: absolute;
   top: 2vh;
   right: 2vw;
@@ -103,33 +105,35 @@
   /*     animation: jumpMario .8s 1 linear; */
 }
 .active {
-  animation: jumpMario 0.5s 1 linear;
+  animation: jumpMario 0.7s  linear;
 }
 
 img {
   width: 100%;
 }
 
+
 .btn__button {
-  width: 100px;
-  height: 100px;
+  width: 10rem;
+  height: 10rem;
   font-size: 50px;
-  background-color: pink;
-  color: blue;
+  background-color: rgb(220, 247, 42);
   border: none;
   border-radius: 50%;
   box-shadow: 0 5px 10px #468e05;
   transform: scale(1);
   transition: all 0.1s ease-in;
+  z-index: 20;
 }
 .btn__button:active {
   transform: scale(0.98);
   box-shadow: 0 3px 5px #3e7d05;
 }
 .btn__jump {
-  width: 50px;
-  height: 50px;
+  width: 5rem;
+  height: 5rem;
   filter: drop-shadow(0 2px 3px #484d44);
+  z-index: 2;
 }
 
 /* ANIMATION */
@@ -157,12 +161,21 @@ img {
 
 @keyframes jumpMario {
   0% {
-    transform: translateY(0px);
+    transform: translateY(0rem);
   }
   50% {
-    transform: translateY(-100px);
+    transform: translateY(-10rem);
   }
-  0% {
-    transform: translateY(0px);
+  
+  20% {
+    transform: translateY(-5rem);
   }
+}
+
+
+@media screen and (max-width: 500px) {
+    img {
+  width: 70%;
+}
+
 }
