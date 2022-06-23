@@ -1,5 +1,5 @@
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 .container {
   position: relative;
@@ -11,6 +11,13 @@ html {
   overflow: hidden;
 }
 
+h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-family: monospace;
+    color: rgba(148, 253, 2, 0.918);
+    border-bottom: .4rem red double;
+}
 .game {
   width: 100%;
   height: 70vh;
@@ -105,15 +112,16 @@ html {
   /*     animation: jumpMario .8s 1 linear; */
 }
 .active {
-  animation: jumpMario 0.7s  linear;
+  animation: jumpMario 0.7s linear;
 }
 
 img {
   width: 100%;
 }
 
-
 .btn__button {
+  display: grid;
+  place-items: center;
   width: 10rem;
   height: 10rem;
   font-size: 50px;
@@ -166,16 +174,14 @@ img {
   50% {
     transform: translateY(-10rem);
   }
-  
+
   20% {
     transform: translateY(-5rem);
   }
 }
 
-
 @media screen and (max-width: 500px) {
-    img {
-  width: 70%;
-}
-
+  img {
+    width: 70%;
+  }
 }
