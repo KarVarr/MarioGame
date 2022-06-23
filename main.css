@@ -1,0 +1,168 @@
+.container {
+  position: relative;
+  width: 99vw;
+  height: 99vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+.game {
+  width: 99vw;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    180deg,
+    rgb(25, 115, 140) 0%,
+    rgba(45, 252, 255, 1) 70%
+  );
+}
+.game__ground {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  width: 99vw;
+  height: 30vh;
+  background: linear-gradient(
+    180deg,
+    rgb(152, 224, 88) 70%,
+    rgb(107, 146, 73) 100%
+  );
+}
+
+.ground {
+    width: 5vw;
+    height: 2vh;
+    background-color: rgb(97, 66, 14);
+    border-radius: 86% 58% 69% 25%;
+    position: absolute;
+    top: 7vh;
+    
+}
+
+.groont1 {
+    top: 4vh;
+    right: -1vw;
+    animation: moveMushroom 6s infinite linear 2s;
+}
+
+.groont2 {
+    top: 2vh;
+    right: -1vw;
+    animation: moveMushroom 6s infinite linear .5s;
+}
+
+.groont3 {
+    top: 7vh;
+    right: -1vw;
+    animation: moveMushroom 6s infinite linear 1.4s;
+}
+
+.sky {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 5vh;
+  right: -30vw;
+  animation: moveMushroom 10s infinite linear;
+}
+.sun {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 2vh;
+  right: 2vw;
+  animation: moveSun 18s infinite linear;
+}
+
+.img__mush,
+.imgMario {
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+}
+.img__mush {
+  position: absolute;
+  top: 65.4vh;
+  right:-1vw;
+  animation: moveMushroom 6s infinite linear;
+}
+
+.imgMario {
+  position: absolute;
+  top: 64.4vh;
+  left: 20vw;
+  /*     animation: jumpMario .8s 1 linear; */
+}
+.active {
+  animation: jumpMario 0.5s 1 linear;
+}
+
+img {
+  width: 100%;
+}
+
+
+.btn__button {
+  width: 100px;
+  height: 100px;
+  font-size: 50px;
+  background-color: pink;
+  color: blue;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 5px 10px #468e05;
+  transform: scale(1);
+  transition: all 0.1s ease-in;
+}
+.btn__button:active {
+  transform: scale(0.98);
+  box-shadow: 0 3px 5px #3e7d05;
+}
+.btn__jump {
+  width: 50px;
+  height: 50px;
+  filter: drop-shadow(0 2px 3px #484d44);
+}
+
+
+
+/* ANIMATION */
+
+@keyframes moveSun {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveMushroom {
+  0% {
+    transform: translateX(0vw);
+  }
+  50% {
+    transform: translateX(-65vw);
+  }
+  100% {
+    transform: translateX(-130vw);
+  }
+}
+
+@keyframes jumpMario {
+  0% {
+    transform: translateY(0vw);
+  }
+  50% {
+    transform: translateY(-6vw);
+  }
+  0% {
+    transform: translateY(0vw);
+  }
+}
