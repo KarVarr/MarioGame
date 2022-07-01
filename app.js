@@ -11,7 +11,7 @@ const mushroomLeft = parseInt(
 );
 
 function jump () {
-    btn.addEventListener("click", () => {
+    btn.addEventListener("touchstart", () => {
      if(mario.classList != 'active'){
       mario.classList.add("active");
      }
