@@ -30,3 +30,4 @@ jump ()
 //       alert(`You'r lose!`);
 //     }
 // },10)   
+
